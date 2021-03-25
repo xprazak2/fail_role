@@ -1,4 +1,8 @@
 ---
-- name: 'Touch file'
-  command: touch /foo/bar.txt
+#- name: 'Touch file'
+#  command: touch /foo/bar.txt
 
+- name: "Can't touch this"
+  file:
+    path: /foo/bar.txt
+    mode: '0644'
